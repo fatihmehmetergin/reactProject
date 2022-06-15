@@ -12,14 +12,14 @@ function AddHotel({ updateHotelList, orderByIncrease, orderByDecrease }) {
       $addButton.textContent = '<';
       $pageName = " LİSTE SAYFASINA DÖN"
 
-      elementSetVisible('.hotelCard, .container, .deleteButton','none');
+      elementSetVisible('.hotel, .container, .deleteButton','none');
       elementSetVisible('Textarea, .addHotelButton','block');
     }
     else{
       document.querySelector('.addButton').textContent = '+';
       $pageName.innerText = " OTEL EKLE"
 
-      elementSetVisible('.hotelCard, .container','block');
+      elementSetVisible('.hotel, .container','block');
       elementSetVisible('Textarea, .addHotelButton, .deleteButton','none');
     }
   };
@@ -49,12 +49,12 @@ function AddHotel({ updateHotelList, orderByIncrease, orderByDecrease }) {
       document.querySelector('.pageName').innerText = " OTEL EKLE"
 
       elementSetVisible('Textarea, .addHotelButton','none');
-      elementSetVisible('.hotelCard, .container','block');
+      elementSetVisible('.hotel, .container','block');
 
       $addHotelButton.style.backgroundColor = "#0B28F8"
     }, 750);
   
-    elementSetVisible('.hotelCard','block');
+    elementSetVisible('.hotel','block');
 
     updateHotelList(item);
   };
